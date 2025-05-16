@@ -1,14 +1,36 @@
 [package]
 name = "gitty"
 version = "0.1.0"
+authors = ["leegeunhyeok <dev.ghlee@gmail.com>"]
 edition = "2021"
+resolver = "2"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+members = [
+    ".",
+    "crates/*"
+]
+
+[[bin]]
+name = "gitty"
+harness = false # do not use the built in cargo test harness -> resolve rust-analyzer errors
 
 [dependencies]
-mousefood = { version = "0.2.1" }
-ratatui   = "0.29.0"
+log = "0.4"
+esp-idf-svc = { version = "0.51", features = ["critical-section", "embassy-time-driver", "embassy-sync"] }
+
+[build-dependencies]
+embuild = "0.33"
 
 [features]
 default   = []
-simulator = ["mousefood/simulator"]
+experimental = ["esp-idf-svc/experimental"]
+
+[profile.dev]
+debug = true    # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+[profile.release]
+opt-level = "s"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

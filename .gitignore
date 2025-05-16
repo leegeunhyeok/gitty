@@ -2,6 +2,7 @@
 /target
 ^target/
 target
+/.embuild
 
 # Miscs
 .DS_Store
