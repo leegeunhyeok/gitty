@@ -18,6 +18,11 @@ harness = false # do not use the built in cargo test harness -> resolve rust-ana
 [dependencies]
 log = "0.4"
 esp-idf-svc = { version = "0.51", features = ["critical-section", "embassy-time-driver", "embassy-sync"] }
+esp-idf-hal = { version = "0.45.2", features = ["std"] }
+mousefood = "0.2.1"
+embedded-graphics = "0.8"
+mipidsi = "0.9.0"
+embedded-hal = "1.0.0"
 
 [build-dependencies]
 embuild = "0.33"

@@ -12,7 +12,6 @@ fn main() -> Result<(), std::io::Error> {
     Ok(())
 }
 
-
 mod display;
 mod profile;
 mod ui;

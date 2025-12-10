@@ -9,3 +9,22 @@ cargo install <name>
 - espup
 - ldproxy
 - espflash
+
+## Pinmap
+
+- LCD_BL 38
+- LCD_D0 39
+- LCD_D1 40
+- LCD_D2 41
+- LCD_D3 42
+- LCD_D4 45
+- LCD_D5 46
+- LCD_D6 47
+- LCD_D7 48
+- LCD_WR 08
+- LCD_RD 09
+- LCD_CD 07
+- LCD_CS 06
+- LCD_RES 05
+- LCD_Power_On 15
+
